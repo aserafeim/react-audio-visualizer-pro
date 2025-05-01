@@ -14,6 +14,7 @@ export interface AudioVisualizerProps {
   barWidth?: number;
   barSpacing?: number;
   barRadius?: number;
+  radiusScale?: number;
   smoothingTimeConstant?: number;
   animationSpeed?: number;
   fftSize?: number;

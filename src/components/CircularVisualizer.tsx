@@ -9,10 +9,11 @@ export const CircularVisualizer: React.FC<AudioVisualizerProps> = ({
   useMicrophone,
   width = 800,
   height = 800,
-  backgroundColor = '#1a1a2e',
+  backgroundColor = '#8B0000',
   gradientColors = ['#00bcd4', '#4CAF50', '#8BC34A'],
   barWidth = 3,
   smoothingTimeConstant = 0.8,
+  radiusScale = 3,
   fftSize = 2048,
   minDecibels = -90,
   maxDecibels = -10,
@@ -38,7 +39,7 @@ export const CircularVisualizer: React.FC<AudioVisualizerProps> = ({
 
     const centerX = width / 2;
     const centerY = height / 2;
-    const radius = Math.min(width, height) / 3;
+    const radius = Math.min(width, height) / radiusScale;
     const bars = Math.min(bufferLength, 360);
     const angleStep = (2 * Math.PI) / bars;
 
